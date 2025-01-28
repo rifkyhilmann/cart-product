@@ -2,3 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+.row-center-center {
+    @apply flex justify-center items-center;
+}
+
+.col-center-center {
+    @apply flex flex-col justify-center items-center;
+}
+
+
+
