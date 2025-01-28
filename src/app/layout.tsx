@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Red_Hat_Text } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const redHatText = Red_Hat_Text({
+  subsets: ["latin"], // Pilih subset yang diinginkan (latin di sini)
+  weight: ["400", "700"], // Bisa memilih bobot font yang diinginkan
+  variable: "--font-red-hat-text", // Opsional: memberi variable custom untuk font
 });
 
 export const metadata: Metadata = {
@@ -25,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${redHatText.variable} antialiased`}
       >
         {children}
       </body>
